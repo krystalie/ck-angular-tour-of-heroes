@@ -1,0 +1,20 @@
+<!-- This component simply receives a hero object 
+through its hero property and displays it. Parent class is hero component-->
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+	<!-- ngfor displays a list / property class binding / event binding-->
+	<li *ngFor="let hero of heroes">
+		<a routerLink = "/detail/{{hero.id}}">
+			<span class="badge">{{hero.id}}</span> {{hero.name}}
+		</a>
+	</li>
+<ul>
+
+
+
+
+<!-- the external hero component is INPUTTED into the hero detail component
+ thus needing input decorator-->
+ <!-- hero is binded to selectedhero(right to left)-->
+<!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
